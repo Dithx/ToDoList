@@ -190,9 +190,13 @@ main{
 }
 
 @media screen and (max-width: 500px) {
+    main{
+        height: 80vh;
+    }
+
     .wrap-content{
-        padding: 2em 0;
-        height: 100vh;
+        padding: 2em 1em;
+        height: 95vh;
         /* align-items: flex-start; */
     }
 
