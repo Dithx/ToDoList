@@ -54,8 +54,8 @@ function displayItem(item) {
     create.className = "items";
     create.innerHTML = `
     <p>${item.value}</p>
-    <button class="edit">E</button>
-    <button class="delete">D</button>
+    <button class="edit">edit</button>
+    <button class="delete">del</button>
     `;
 
     itemList.appendChild(create);

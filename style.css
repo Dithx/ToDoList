@@ -126,7 +126,7 @@ main{
 }
 
 .modal-window{
-    position: absolute;
+    position: fixed;
     display: none;
     top: 50%;
     left: 50%;
@@ -191,14 +191,24 @@ main{
 
 @media screen and (max-width: 500px) {
     .wrap-content{
-        padding: 8em 2em;
+        padding: 2em 0;
+        height: 100vh;
+        /* align-items: flex-start; */
+    }
+
+    .item-list{
+        height: 300px;
+    }
+
+    .modal-window{
+        top: 30%;
+    }
+
+    .box-content{
+
     }
 }
 @media screen and (max-width: 400px) {
-    .wrap-content{
-        padding: 2em 2em;
-    }
-
     .item-list{
         height: 300px;
     }
@@ -212,7 +222,12 @@ main{
     }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 350px) {
+
+    .wrap-content{
+        height: 700px;
+    }
+
     .item-list{
         gap: 0;
         padding: 0;
