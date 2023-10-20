@@ -1,0 +1,230 @@
+:root{
+    --background-color: #ced4da;
+    --primary-color: #edf6f9;
+    --secondary-color: #4cc9f0;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    height: 100vh;
+    background-color: #f8f9fa;
+}
+
+.wrap-content{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    padding: 8em 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.box-content{
+    display: flex;
+    flex-direction: column;
+    gap: 2em 0;
+    width: 600px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 30px 0px #c1c6cc;
+    text-align: center;
+    padding: 6em 3em;
+}
+
+.box-content header{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #2b2d42;
+}
+
+.box-input{
+    display: flex;
+    width: 100%;
+}
+
+.box-input input[type=input]{
+    width: 100%;
+    padding: 8px;
+    border-radius: 10px 0 0 10px;
+    border: none;
+    background-color: var(--primary-color);
+    outline: #ced4da;
+}
+
+.box-input input[type=submit]{
+    border: none;
+    background-color: var(--secondary-color);
+    width: 80px;
+    border-radius: 0 10px 10px 0;
+}
+
+.item-list{
+    display: flex;
+    height: 400px;
+    overflow-y: scroll;
+    overflow-wrap: break-word;
+    flex-direction: column;
+    gap: 10px 0;
+    padding: 0 5px;
+    /* box-shadow: 0 10px 0px 1px var(--background-color); */
+}
+  
+
+.item-list article{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 10px;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.items p{
+    align-self: center;
+    flex: 1;
+    width: 100px;
+    text-align: start;
+}
+
+.items button{
+    align-self: center;
+    background-color: transparent;
+    height: 30px;
+    width: 40px;
+    /* padding: 0 0.5em; */
+    border-radius: 10px;
+    border: 1px solid var(--secondary-color);
+}
+
+.items button:hover{
+    background-color: var(--secondary-color);
+}
+
+.items:hover{
+    background-color: var(--primary-color);
+}
+
+.clearItems{
+    display: none;
+    align-self: center;
+    width: 8em;
+    background-color: transparent;
+    border: none;
+    font-size: 1.1em;
+    color: crimson;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.clearItems.show{
+    display: block;
+}
+
+.modal-window{
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #489fb5;
+    box-shadow: 3px 5px 1px var(--background-color);
+    width: 400px;
+    height: 300px;
+    text-align: center;
+    padding: 2em;
+    border-radius: 20px;
+    color: white;
+}
+
+.modal-window.show{
+    display: flex;
+}
+
+.modal-content.clearAll{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 2em 0;
+}
+
+.modal-content.edit{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.modal-content.edit input[type=input]{
+    width: 100%;
+    padding: 1em;
+    border-radius: 10px;
+    border: none;
+}
+
+.box-btn-modal{
+    align-self: center;
+    display: flex;
+    gap: 0 20px;
+}
+
+.box-btn-modal button{
+    padding: 0.6em 3em;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.batal-btn{
+    background-color: #e5e5e5;
+}
+
+.lanjut-btn{
+    background-color: #06d6a0;
+}
+
+@media screen and (max-width: 500px) {
+    .wrap-content{
+        padding: 8em 2em;
+    }
+}
+@media screen and (max-width: 400px) {
+    .wrap-content{
+        padding: 2em 2em;
+    }
+
+    .item-list{
+        height: 300px;
+    }
+
+    .modal-window{
+        width: 350px;
+    }
+
+    .modal-confirm{
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .item-list{
+        gap: 0;
+        padding: 0;
+    }
+
+    .item-list button{
+        height: 20px;
+        width: 30px;
+    }
+
+    .modal-window{
+
+        width: 300px;
+    }
+}
